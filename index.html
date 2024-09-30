@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicado Oficial</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="imagens/paper-plane.png">
+    <link rel="stylesheet" href="https://use.typekit.net/gvp4xoa.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-esquerda">
+            <a href="https://www.instagram.com/elarssen.design/" target="_blank">
+                <img src="imagens/elarssen_logo_principal_branco.png" alt="Logotipo Esquerda">
+            </a>
+        </div>
+        <h1 class="titulo">COMUNICADO OFICIAL</h1>
+        <div class="logo-direita">
+            <a href="https://www.instagram.com/elarssen.design/" target="_blank">
+                <img src="imagens/elarssen_logo_principal_branco.png" alt="Logotipo Direita">
+            </a>
+        </div>
+    </header>
+    
+
+    <div class="typewriter-wrapper">
+        <p id="typewriter">Hola, MARÍA!</p>
+    </div>
+
+    <div class="container">
+        <img src="imagens/paper-plane.png" alt="Avião de papel" width="850">
+        <p class="segundo">
+            Cómo estás? <br>
+            Tengo un mensaje muy importante para vos.<br><br>
+            Haga clic en el botón de abajo para descubrirlo.
+        </p>
+    </div>        
+
+    <figure>
+        <a href="segunda.html" target="_blank"><button> CLIQUE AQUI </button></a>
+    </figure>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="https://www.instagram.com/elarssen.design/" target="_blank">
+                    <img src="imagens/elarssen_logo_principal_branco.png" alt="Logotipo Footer">
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>© 2024 Elarssen Design - Todos os direitos reservados<sup>&#174;</sup></p>
+            </div>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/elarssen.design/" target="_blank">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </a>
+                <a href="mailto:elarssendesign@gmail.com" target="_blank">
+                    <img src="imagens/gmail.png" alt="Gmail">
+                </a>
+                <a href="https://wa.me/123456789" target="_blank">
+                    <img src="imagens/whatsapp.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- JavaScript para o efeito Typewriter em loop -->
+    <script>
+        const text = document.getElementById("typewriter").innerHTML;
+        document.getElementById("typewriter").innerHTML = "";
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            } else {
+                setTimeout(() => {
+                    document.getElementById("typewriter").innerHTML = "";
+                    index = 0;
+                    setTimeout(typeWriter, 500);
+                }, 1000);
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>
